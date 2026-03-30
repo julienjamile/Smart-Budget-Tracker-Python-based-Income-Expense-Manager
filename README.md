@@ -1,46 +1,211 @@
-# Smart-Budget-Tracker-Python-based-Income-Expense-Manager
-A Python-based income and expense manager built with Tkinter. Features real-time tracking, budget categorization, and local JavaScript Object Notation (JSON) storage. Developed as a Bachelor of Science in Computer Science student as a final project for the Course, Intermediate Programming at Pamantasan ng Lungsod ng Maynila (PLM)
+# 💰 Smart Budget Tracker
+### Python-Based Income & Expense Manager
 
-# Smart Budget Tracker: Python-Based Income & Expense Manager
+![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Tkinter](https://img.shields.io/badge/GUI-Tkinter-lightgrey?style=for-the-badge)
+![JSON](https://img.shields.io/badge/Storage-JSON-orange?style=for-the-badge&logo=json&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Completed-2ea44f?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
 
-![Python](https://img.shields.io/badge/Python-3.x-blue.svg)
-![Tkinter](https://img.shields.io/badge/GUI-Tkinter-lightgrey.svg)
-![Status](https://img.shields.io/badge/Status-Completed-success.svg)
+> A desktop application that helps individuals track their monthly income and expenses in real time — built with Python and Tkinter as a final academic project at Pamantasan ng Lungsod ng Maynila.
 
-## Project Description
-[cite_start]Effective financial control is important in today's rapidly changing environment, yet many people find it challenging to keep track of their money using manual techniques like calculators or spreadsheets, which are frequently prone to mistakes, inefficiencies, and inconsistencies[cite: 51, 89, 90]. 
+---
 
-[cite_start]The Smart Budget Tracker is an automated, user-friendly tool built in Python to address these issues[cite: 53, 92]. [cite_start]It provides users with clear visual financial insights, category budget management, and real-time spending tracking[cite: 54]. [cite_start]This system is designed to empower individuals—from salaried workers to freelancers and students—to take control of their finances, cut back on wasteful spending, and work toward financial stability[cite: 56, 97].
+## 📋 Table of Contents
 
-## Features
-* [cite_start]**Income-Based Budget Tracking:** Uses the user's monthly income and reported expenses to create an effective budget[cite: 115, 163].
-* [cite_start]**Expense Categories & Flagging:** Classifies expenses into distinct groups and flags overspending when a specific category exceeds the set budget[cite: 116, 180].
-* [cite_start]**Detailed Transaction Logging:** Records Payee details, exact Dates of Payment, Payment Methods (Cash, Credit, Online), and Expense Descriptions for full clarity[cite: 117, 118, 119, 121].
-* [cite_start]**Real-Time Balances & Summaries:** Displays the real-time remaining balance after each input and generates categorized expense summaries[cite: 181, 183].
-* [cite_start]**Data Archiving:** Allows users to view financial records and data from previous months[cite: 253, 254].
+- [About the Project](#-about-the-project)
+- [Features](#-features)
+- [System Architecture](#-system-architecture--how-it-works)
+- [Tech Stack](#-tech-stack)
+- [File Structure](#-file-structure)
+- [Getting Started](#-getting-started)
+- [Screenshots](#-screenshots)
+- [Limitations](#-limitations)
+- [Team Members & Roles](#-team-members--roles)
+- [Acknowledgements](#-acknowledgements)
 
-## System Architecture / How It Works
-[cite_start]The system follows a standard Input-Process-Output (IPO) framework[cite: 166]:
-* [cite_start]**Input:** Users input their monthly income, daily logged expenses (with exact amounts), select predefined categories, add descriptions, and designate payment dates[cite: 170, 171, 172, 173, 174].
-* [cite_start]**Process:** The system analyzes the income, categorizes the inputs, calculates the remaining balance per log, processes the payment date to update the monthly balance, and triggers alerts for overspending[cite: 175, 176, 177, 178, 180].
-* [cite_start]**Output:** The interface displays the real-time remaining balance, a summary of expenses grouped by category, and a table reflecting spending patterns[cite: 181, 183, 184].
+---
 
-## Tech Stack
-* [cite_start]**Language:** Python [cite: 278]
-* [cite_start]**GUI Framework:** Tkinter Widgets [cite: 280]
-* [cite_start]**Data Storage:** Local JSON file handling [cite: 281]
-* [cite_start]**Utilities:** Datetime module for scheduling and logging [cite: 282]
+## 📖 About the Project
 
-## File Structure
-* `main.py` — Main application entry point; handles the Tkinter GUI, button commands, expense input/deletion logic, and balance display.
-* `datahandling.py` — Handles file read/write operations for the JSON data file, checking file states, and saving income data.
-* `datehandling.py` — Retrieves and formats the current month and year used as the active session key.
-* `errorhandling.py` — Contains all validation logic, error-handling functions, date formatting/comparison, balance calculations, and field input checks.
-* `logic.py` — Contains pure logic functions for assigning expense IDs for current-month and scheduled future entries.
-* `IP_Project_Group5_REVISED_.pdf` — Complete academic project documentation and research paper.
+Effective financial control is important in today's rapidly changing environment, yet many people find it challenging to keep track of their money using manual techniques like calculators or spreadsheets — methods that are frequently prone to mistakes, inefficiencies, and inconsistencies.
 
-## How to Run / Installation
-1. Ensure you have Python 3.x installed on your machine.
-2. Clone this repository to your local machine:
-   ```bash
-   git clone [https://github.com/yourusername/your-repo-name.git](https://github.com/yourusername/your-repo-name.git)
+The **Smart Budget Tracker** is an automated, user-friendly desktop tool built in Python to address these issues. It provides users with real-time spending tracking, category-based budget management, and clear financial summaries. Designed to empower everyone — from salaried workers to freelancers and students — to take control of their finances, reduce wasteful spending, and work toward financial stability.
+
+---
+
+## ✨ Features
+
+| Feature | Description |
+|---|---|
+| 💵 **Income-Based Budget Tracking** | Uses the user's monthly income and reported expenses to build and manage an effective budget |
+| 📂 **Expense Categories & Overspending Flags** | Classifies expenses into distinct groups (Food, Transport, Bills, etc.) and alerts the user when a category exceeds budget |
+| 🧾 **Detailed Transaction Logging** | Records payee details, exact payment dates, payment methods (Cash, Credit, Online), and expense descriptions |
+| 📊 **Real-Time Balances & Summaries** | Displays remaining balance after each entry and generates a categorized expense summary |
+| 🗂️ **Monthly Data Archiving** | Allows users to browse and review financial records from previous months |
+| 📅 **Future Expense Scheduling** | Expenses entered with a future date are automatically assigned to the correct upcoming month |
+
+---
+
+## 🔧 System Architecture / How It Works
+
+The system follows an **Input → Process → Output (IPO)** framework:
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  INPUT               PROCESS                OUTPUT              │
+│  ─────               ───────                ──────              │
+│  Monthly Income  →   Analyze income     →   Real-time balance   │
+│  Expense amount  →   Categorize inputs  →   Categorized summary │
+│  Category        →   Calculate balance  →   Spending table      │
+│  Description     →   Process dates      →   Overspending alert  │
+│  Payment date    →   Flag overspending  →                       │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+**Input:** Users enter their monthly income, log daily expenses with exact amounts, select from predefined expense categories, add descriptions, specify a payee, choose a payment method, and designate payment dates.
+
+**Process:** The system analyzes the income, categorizes each input, calculates the real-time remaining balance per log entry, processes payment dates to assign expenses to the correct month, and triggers alerts when any category exceeds 50% of monthly income.
+
+**Output:** The interface displays the up-to-date remaining balance, a categorized summary of all logged expenses, and a data table reflecting spending patterns — all updated live as transactions are added or removed.
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| **Python 3.x** | Core programming language |
+| **Tkinter** | Desktop GUI framework (widgets, layout, events) |
+| **JSON** | Local persistent data storage |
+| **Datetime** | Date scheduling, formatting, and month-based filtering |
+| **Visual Studio Code** | Development environment |
+
+**Hardware used during development:**
+- Processor: Intel Core i5-4210M @ 2.60GHz
+- RAM: 12.0 GB minimum / 16.0 GB recommended
+- System: 64-bit Windows OS
+
+---
+
+## 📁 File Structure
+
+```
+smart-budget-tracker/
+│
+├── main.py                          # Main entry point — Tkinter GUI, button commands,
+│                                    # expense input/deletion logic, balance display
+│
+├── datahandling.py                  # File read/write operations for the JSON data file;
+│                                    # checks file state and saves monthly income
+│
+├── datehandling.py                  # Retrieves and formats the current month and year
+│                                    # used as the active session key
+│
+├── errorhandling.py                 # All validation logic, error handling, date
+│                                    # formatting/comparison, balance calculations,
+│                                    # archive management, and field input checks
+│
+├── logic.py                         # Pure logic functions for assigning expense IDs
+│                                    # for current-month and scheduled future entries
+│
+├── expense data.json                # Auto-generated at runtime — stores active
+│                                    # monthly income and expense records
+│
+├── archivedexpenses.json            # Auto-generated at runtime — stores past
+│                                    # monthly expense records
+│
+└── IP_Project_Group5_REVISED_.pdf   # Full academic project documentation
+```
+
+> **Note:** The two `.json` files (`expense data.json` and `archivedexpenses.json`) are generated automatically when the application is first run. Do not manually edit them.
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Python 3.x installed on your machine
+- `tkinter` is included in the Python standard library — no additional installs required
+- Git installed (for cloning)
+
+### Installation & Running
+
+**1. Clone the repository**
+```bash
+git clone https://github.com/yourusername/smart-budget-tracker.git
+```
+
+**2. Navigate into the project folder**
+```bash
+cd smart-budget-tracker
+```
+
+**3. Run the application**
+```bash
+python main.py
+```
+
+That's it — no additional dependencies or package installations needed. The JSON data files will be created automatically on first run.
+
+---
+
+## 📸 Screenshots
+
+> *Add screenshots of the application to your repository and update the paths below.*
+
+**Main Dashboard — Expense Tracker View**
+
+![Main Dashboard](screenshots/main_dashboard.png)
+
+**Past Expenses — Monthly Archive View**
+
+![Past Expenses](screenshots/past_expenses.png)
+
+---
+
+## ⚠️ Limitations
+
+The following limitations were identified and documented during development:
+
+- **No user accounts** — There is no login/logout system due to the team's limited experience with database integration at the time of development.
+- **No full budgeting support** — The system tracks expenses against income but does not support advanced budgeting features (e.g., budget goals per category set by the user).
+- **Limited security** — The application does not implement advanced data security or encryption protocols.
+- **No external software integration** — The system cannot sync with or import data from other financial apps or platforms.
+- **Manual data entry required** — All expense entries must be input manually; there is no automated data collection.
+
+---
+
+## 👥 Team Members & Roles
+
+This project was developed collaboratively by six students, each assigned a specific technical domain. Listed alphabetically by last name:
+
+| Member | Role | Responsibilities |
+|---|---|---|
+| **Avila, Julien Jamile P.** | File Handling & JSON | Handled reading and writing of processed expense data to and from JSON files. Simulated save/load functionality independently without requiring the GUI, and provided data support for the logic and error handling modules. |
+| **Dela Cruz, Lorejane M.** | Logic & Processing | Developed the core processing logic including expense categorization and balance calculation. Worked initially in a console environment using dummy inputs, with GUI integration completed in a later stage. |
+| **Guevarra, Gabrielle Ruth V.** | Exception Handling & Reporting UI | Responsible for wrapping all logic, file handling, and UI interactions with proper exception handling and error reporting. Prepared reusable templates and wrappers, adding coverage progressively as other modules were finalized. |
+| **Jandoc, Russel Paolo C.** | Event Handling & Button Commands | In charge of binding all GUI button events to their corresponding backend functions. This role was dependent on the layout module being completed first, as it required existing GUI elements to hook event handlers onto. |
+| **Martin, Scheanz Y.** | Date Calculations | Handled all date tagging, date comparison, and month-based filtering logic for expense scheduling and archiving. Used mock data formats initially, pending finalization of the data structure from the Logic and File Handling modules. |
+| **Sebastian, Jan Zyanne B.** | Layout & Tkinter Widgets *(Lead)* | Led the design and implementation of the entire GUI structure, including all labels, entry fields, buttons, comboboxes, and Treeview table widgets using Tkinter. This module could begin independently and served as the structural foundation all other roles depended on. |
+
+---
+
+## 🙏 Acknowledgements
+
+Developed as a final course requirement for the **Bachelor of Science in Computer Science** program at:
+
+**Pamantasan ng Lungsod ng Maynila (PLM)**
+College of Information Systems and Technology Management
+Department of Computer Science
+
+Supervised and evaluated by **Prof. Marilou B. Mangrobang**.
+
+Special thanks to our panelists for their guidance and critical feedback, and to our families and friends for their continuous support throughout the development of this project.
+
+---
+
+<p align="center">
+  Made with ❤️ by Group 5 — BS Computer Science, PLM · May 2025
+</p>
