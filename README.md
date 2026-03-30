@@ -157,11 +157,11 @@ That's it — no additional dependencies or package installations needed. The JS
 
 **Main Dashboard — Expense Tracker View**
 
-![Main Dashboard](screenshots/main_dashboard.png)
+<img width="828" height="448" alt="image" src="https://github.com/user-attachments/assets/38378a00-ff2b-43dd-82a4-5a2717a98ac6" />
 
 **Past Expenses — Monthly Archive View**
 
-![Past Expenses](screenshots/past_expenses.png)
+<img width="830" height="431" alt="image" src="https://github.com/user-attachments/assets/2ed502ff-a076-4737-ad40-75bacdf04ee2" />
 
 ---
 
@@ -183,7 +183,7 @@ This project was developed collaboratively by six students, each assigned a spec
 
 | Member | Role | Responsibilities |
 |---|---|---|
-| **Avila, Julien Jamile P.** | File Handling & JSON | Handled reading and writing of processed expense data to and from JSON files. Simulated save/load functionality independently without requiring the GUI, and provided data support for the logic and error handling modules. |
+| **Avila, Julien Jamile P.** | File Handling & JSON (Project Lead) | Served as the overall project lead, coordinating the team's progress and merging all individual modules into a single, cohesive and functioning system. Handled reading and writing of processed expense data to and from JSON files. Simulated save/load functionality independently without requiring the GUI, and provided data support for the logic and error handling modules. |
 | **Dela Cruz, Lorejane M.** | Logic & Processing | Developed the core processing logic including expense categorization and balance calculation. Worked initially in a console environment using dummy inputs, with GUI integration completed in a later stage. |
 | **Guevarra, Gabrielle Ruth V.** | Exception Handling & Reporting UI | Responsible for wrapping all logic, file handling, and UI interactions with proper exception handling and error reporting. Prepared reusable templates and wrappers, adding coverage progressively as other modules were finalized. |
 | **Jandoc, Russel Paolo C.** | Event Handling & Button Commands | In charge of binding all GUI button events to their corresponding backend functions. This role was dependent on the layout module being completed first, as it required existing GUI elements to hook event handlers onto. |
@@ -202,10 +202,4 @@ Department of Computer Science
 
 Supervised and evaluated by **Prof. Marilou B. Mangrobang**.
 
-Special thanks to our panelists for their guidance and critical feedback, and to our families and friends for their continuous support throughout the development of this project.
-
----
-
-<p align="center">
-  Made with ❤️ by Group 5 — BS Computer Science, PLM · May 2025
-</p>
+Special thanks to our panelists for their guidance and critical feedback.
