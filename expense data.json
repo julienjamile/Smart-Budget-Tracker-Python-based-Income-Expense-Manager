@@ -1,0 +1,45 @@
+{
+    "Monthly Income": 70000.0,
+    "Expenses": {
+        "June 2026": [
+            {
+                "Date": "06/09/2026",
+                "Description": "Electricity bill from meralco",
+                "Amount": 12054.0,
+                "Category": "Bills",
+                "Payee": "Meralco",
+                "Method": "Credit",
+                "ID": 1
+            },
+            {
+                "Date": "06/18/2026",
+                "Description": "Loan",
+                "Amount": 30000.0,
+                "Category": "Bills",
+                "Payee": "China Bank",
+                "Method": "Cash",
+                "ID": 2
+            },
+            {
+                "Date": "06/01/2026",
+                "Description": "Tuition Fee",
+                "Amount": 25000.0,
+                "Category": "Bills",
+                "Payee": "Adamson University Registrar",
+                "Method": "Online",
+                "ID": 3
+            }
+        ],
+        "July 2026": [
+            {
+                "Date": "07/25/2026",
+                "Description": "Tuition Fee",
+                "Amount": 10000.0,
+                "Category": "Bills",
+                "Payee": "Pamantasan ng Lungsod ng Maynila Registrar",
+                "Method": "Online",
+                "ID": 1
+            }
+        ]
+    }
+}

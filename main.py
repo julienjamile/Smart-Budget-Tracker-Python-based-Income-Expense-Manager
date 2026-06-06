@@ -104,6 +104,7 @@ def change_income():
     try:
         income = float(income_entry.get())
         monthly_income = income
+        total_expenses = error.passBudget(current_MonthYear)
         if total_expenses == 0.0:
             remaining_balance = income
         elif total_expenses <= income:
@@ -119,7 +120,9 @@ def change_income():
         messagebox.showerror("Invalid Input:", "Please enter a valid numeric value for income.")
 
 def showTotalSpent():
-    messagebox.showinfo("Total Expenses", f"Your total spent for this month is {total_expenses}")
+    global total_expenses
+    total_expenses = error.passBudget(current_MonthYear)
+    messagebox.showinfo("Total Expenses", f"Your total spent for this month is PHP {total_expenses:.2f}")
 def noMonthlyIncome():
     messagebox.showwarning("Total Expenses", f"Input Monthly Income first")
 
@@ -313,6 +316,9 @@ def input_expense():
 
         expenses["Expenses"][current_MonthYear].append(expense_data)
         error.saveData(expenses)
+        
+        global total_expenses
+        total_expenses = error.passBudget(current_MonthYear)
 
     else:
         next_MonthYear = error.datetoKey(date)
@@ -373,6 +379,11 @@ def delete_selected():
                 data["Payee"],
                 data["Method"]
             ))
+
+        error.saveData(expenses)
+        
+        global total_expenses
+        total_expenses = error.passBudget(current_MonthYear)
 
         error.saveData(expenses)
 

@@ -2,6 +2,7 @@
 import datetime
 from tkinter import messagebox
 import json
+import os
 
 #Error-Logic Handling
 def calculate_remaining_balance(data, currentDate):
@@ -43,6 +44,8 @@ def calculate_total_spent(data, currentDate):
 #Error-File Handling
 
 def passArchive():
+    if not os.path.exists('archivedexpenses.json'):
+        return {}
     try:
         with open('archivedexpenses.json') as f:
             data = json.load(f)

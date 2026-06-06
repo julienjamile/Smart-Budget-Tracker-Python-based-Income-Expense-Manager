@@ -1,8 +1,11 @@
 import json 
+import os
 import logic as logic
 import errorhandling as error
 
 def isFileEmpty():
+    if not os.path.exists('expense data.json'):
+        return True
     with open('expense data.json') as f:
         content = f.read().strip()
     if not content:
